@@ -1,11 +1,18 @@
 #! /bin/bash
 
 echo "Installing..."
+
+if [ -d ~/.conky_csd ]
+then
+	echo "deleting old files"
+	rm -rf ~/.conky_csd
+fi
+
 mkdir ~/.conky_csd
-echo "Hidden folder \".conky_csd\" has been created"
+echo "hidden folder \".conky_csd\" has been created"
 echo "moving files"
-mv ./bash.sh ~/.conky_csd/
-mv ./conkyrcleftCSD ~/.conky_csd/
+cp ./bash.sh ~/.conky_csd/
+cp ./conkyrcCSD ~/.conky_csd/
 
 echo "Done Install!" 
 

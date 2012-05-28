@@ -6,6 +6,8 @@ if [ -e ~/.conky_csd/conf/announcements.php ]; then
 	rm -f ~/.conky_csd/conf/announcements
 fi
 
+mkdir -p ~/.conky_csd/conf
+
 wget -q http://www.csd.auth.gr/announcements.php -O ~/.conky_csd/conf/announcements
 
 # test if file announcements exists.
@@ -16,9 +18,7 @@ fi
 
 LOOP=1
 
-mkdir -p ~/.conky_csd/conf
 ID=`tail -n 60 ~/.conky_csd/conf/announcements | grep "<ul><li><a href=\"" | awk '{ print $2 }' | cut -c 35-37`
-echo ID = $ID
 
 if [ -f ~/.conky_csd/conf/last_announcementID ]; then
 	if [ $ID -gt `cat ~/.conky_csd/conf/last_announcementID` ] ; then 
