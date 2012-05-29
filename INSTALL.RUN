@@ -4,20 +4,20 @@ echo "Installing..."
 
 if [ -d ~/.conky_csd ]
 then
-	echo "deleting old files"
+	echo -n "deleting old files.."
 	rm -rf ~/.conky_csd
+	echo " Done"
 fi
 
+echo -n "hidden folder \".conky_csd\" has been created.."
 mkdir ~/.conky_csd
-echo "hidden folder \".conky_csd\" has been created"
-echo "moving files"
+echo " Done"
+echo -n "copying files.."
 cp ./bash.sh ~/.conky_csd/
 cp ./conkyrcCSD ~/.conky_csd/
+echo " Done"
 
 echo "Done Install!" 
 
 echo 
 echo "Run \"conky -d -c ~/.conky_csd/conkyrcCSD\" "
-
-
-
