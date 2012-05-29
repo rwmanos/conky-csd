@@ -26,7 +26,7 @@ if [ -f ~/.conky_csd/conf/last_announcementID ]; then
 		echo $ID > ~/.conky_csd/conf/last_announcementID
 	fi
 else 
-	echo `date +%j` > ~/.conky_csd/conf/last_announcementDate
+	echo `date --date='10 days ago' +%j` > ~/.conky_csd/conf/last_announcementDate
 	echo $ID > ~/.conky_csd/conf/last_announcementID
 fi
 
