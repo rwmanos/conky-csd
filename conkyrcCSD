@@ -32,5 +32,5 @@ uppercase no # set to yes if you want all text to be in uppercase
 #use_spacer no
 
 TEXT
-${color A3C200}CSD announcements:${exec ~/.conky_csd/bash.sh > /dev/null}${if_match ${exec cat ~/.conky_csd/cache/last_announcementDate } >= ${exec date --date='10 days ago' +'%j'}}${color CF0000} ( NEW ! )$endif
+${color A3C200}CSD announcements:${exec ~/.conky_csd/bash.sh > /dev/null}${if_match ${exec cat ~/.conky_csd/cache/last_announcementDate } >= ${exec date --date='4 days ago' +'%j'}}${color CF0000} ( NEW ! )$endif
 ${color 257E00}${exec ~/.conky_csd/bash.sh}
