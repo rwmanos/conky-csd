@@ -1,5 +1,5 @@
 #! /bin/bash
-
+//rwmaons
 REPEATS=4
 
 if [ -e ~/.conky_csd/cache/announcements.php ]; then
